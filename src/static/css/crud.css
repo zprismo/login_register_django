@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/*@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    /*font-family: 'Lato', sans-serif;*/
+    text-decoration: none;
+}
+
+.left-bar {
+    width: 250px;
+    height: 100vh;
+    background: #F5FAFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-bar .container-left-bar {
+    width: 85%;
+    height: 97%;
+    /*border: solid green 2px;*/
+    position: relative;
+}
+
+.left-bar .logo-bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    /*border: solid 2px red;*/
+}
+
+.left-bar .logo-bar > p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374976;
+}
+
+.left-bar .logo-bar img {
+    height: 28px;
+    margin-right: 10px;
+}
+
+.left-bar .profile-bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /*border: solid 2px red;*/
+}
+
+.left-bar .profile-bar > p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #293869;
+}
+
+.left-bar .profile-bar > p .user-email {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9FA7B9;
+}
+
+.left-bar .profile-bar .profile-picture {
+    height: 34px;
+    margin-right: 4px;
+}
+
+.left-bar .profile-bar .profile-logout {
+    position: absolute;
+    right: 4px;
+    bottom: 18px;
+    height: 22px;
+}
+
+
+.left-bar .container-left-bar .apps-content {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.left-bar .container-left-bar .apps-content .app-item {
+    display: flex;
+    align-items: center;
+    height: auto;
+    border-radius: 4px;
+    padding: 8px 0;
+    transition-duration: 0.4s;
+}
+
+.left-bar .container-left-bar .apps-content .app-item:hover {
+    background: #ddebfa;
+    cursor: pointer;
+}
+
+.left-bar .container-left-bar .apps-content .app-item img {
+    height: 20px;
+    margin-right: 14px;
+    margin-left: 8px;
+}
+
+.left-bar .container-left-bar .apps-content .app-item p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #26386E;
+}

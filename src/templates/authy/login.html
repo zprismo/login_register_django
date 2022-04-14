@@ -1,0 +1,65 @@
+{% extends 'authy/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="content-right">
+            <div class="login-form">
+{#                <h2>Log in</h2>#}
+                <img src="{% static 'images/innovahtecsolutions_circle.svg' %}" alt="">
+                {% if form.errors %}
+                <a class="container-error" href="{% url 'authy:login' %}">
+                    <img src="{% static 'images/close-icon.png' %}" alt="">
+                    <p>
+                        {% for key,value in form.errors.items %}
+                            {% for error in value %}
+                                {{ error }}
+                            {% endfor %}
+                        {% endfor %}
+                    </p>
+                </a>
+                {% endif %}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <p>
+                        <span class="p-bold">Username</span><br>
+                        {{ form.username }}
+{#                        <input type="text" placeholder="Enter your username" name="username">#}
+                    </p>
+                    <p>
+                        <span class="p-bold">Password</span><br>
+                        {{ form.password }}
+{#                        <input type="password" placeholder="Enter your password" name="password">#}
+                    </p>
+                    <div class="pre-submit">
+                        <div>
+                            <input class="btn-check" type="checkbox">
+                            <span>Remember me</span>
+                        </div>
+                        <div>
+                            <a class="a-link" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                    <p>
+                        <button type="submit" class="btn-login">Log in</button>
+                    </p>
+                </form>
+                <div class="or">
+                    <div class="line"></div>
+                    <p>or</p>
+                    <div class="line"></div>
+                </div>
+                <div class="btn-login-google">
+                    <img src="{% static 'images/source_icons_google.svg' %}" alt="">
+                    <p>Log in with Google</p>
+                </div>
+                <div class="create-account">
+                    <p>Don't have an account?</p>
+                    <a class="a-link" href="{% url 'authy:register' %}">Create Account</a>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

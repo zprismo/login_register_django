@@ -1,0 +1,42 @@
+{% extends 'crud/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+    Home - Innovahtec
+{% endblock title %}
+
+{% block content %}
+
+    <div class="left-bar">
+        <div class="container-left-bar">
+            <div class="logo-bar">
+                <img src="{% static 'images/innovahtec_logo.png' %}" alt="">
+                <p>Innovahtec</p>
+            </div>
+
+            <div class="apps-content">
+                <a class="app-item" href="{% url 'crud:home' %}">
+                    <img src="{% static 'images/home.svg' %}" alt="">
+                    <p>Home</p>
+                </a>
+                <a class="app-item" href="{% url 'crud:home' %}">
+                    <img src="{% static 'images/file.svg' %}" alt="">
+                    <p>Reports</p>
+                </a>
+            </div>
+
+
+            <div class="profile-bar">
+                <img class="profile-picture" src="{% static 'images/profile_img_default.svg' %}" alt="">
+                <p>
+                    {{ user.first_name }} {{ user.last_name }}<br>
+                    <span class="user-email">{{ user.email }}</span>
+                </p>
+                <a href="{% url 'authy:logout' %}"><img class="profile-logout" src="{% static 'images/profile_logout.svg' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
